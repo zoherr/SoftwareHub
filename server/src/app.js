@@ -7,6 +7,7 @@ import userRouter from "./routes/user.route.js";
 import articleRouter from "./routes/article.route.js";
 import softwareRouter from "./routes/software.route.js";
 import communityRouter from "./routes/community.route.js";
+import questionRouter from "./routes/question.route.js";
 
 export const app = express();
 
@@ -25,6 +26,7 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/article", articleRouter);
 app.use("/api/v1/software", softwareRouter);
 app.use("/api/v1/community", communityRouter);
+app.use("/api/v1/question", questionRouter);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;

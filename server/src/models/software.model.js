@@ -9,6 +9,10 @@ const softwareSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    followers: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    }],
     community: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Community',
